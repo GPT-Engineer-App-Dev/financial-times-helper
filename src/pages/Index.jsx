@@ -5,18 +5,18 @@ const Index = () => {
   return (
     <Container maxW="container.xl" p={0}>
       {/* Navigation Bar */}
-      <Box bg="brand.800" color="white" py={4}>
+      <Box bg="#003366" color="white" py={4}>
         <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={4}>
           <Heading as="h1" size="lg">
             Financial Times
           </Heading>
           <HStack spacing={8}>
-            <Link to="/">Home</Link>
-            <Link to="/world">World</Link>
-            <Link to="/business">Business</Link>
-            <Link to="/tech">Tech</Link>
-            <Link to="/markets">Markets</Link>
-            <Link to="/opinion">Opinion</Link>
+            <Link to="/" style={{ color: "#FFFFFF" }}>Home</Link>
+            <Link to="/world" style={{ color: "#FFFFFF" }}>World</Link>
+            <Link to="/business" style={{ color: "#FFFFFF" }}>Business</Link>
+            <Link to="/tech" style={{ color: "#FFFFFF" }}>Tech</Link>
+            <Link to="/markets" style={{ color: "#FFFFFF" }}>Markets</Link>
+            <Link to="/opinion" style={{ color: "#FFFFFF" }}>Opinion</Link>
           </HStack>
         </Flex>
       </Box>
