@@ -1,18 +1,93 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={0}>
+      {/* Navigation Bar */}
+      <Box bg="brand.800" color="white" py={4}>
+        <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={4}>
+          <Heading as="h1" size="lg">
+            Financial Times
+          </Heading>
+          <HStack spacing={8}>
+            <Link to="/">Home</Link>
+            <Link to="/world">World</Link>
+            <Link to="/business">Business</Link>
+            <Link to="/tech">Tech</Link>
+            <Link to="/markets">Markets</Link>
+            <Link to="/opinion">Opinion</Link>
+          </HStack>
+        </Flex>
+      </Box>
+
+      {/* Main Content */}
+      <Box py={8} px={4}>
+        <VStack spacing={8} align="stretch">
+          {/* Headline Section */}
+          <Box>
+            <Heading as="h2" size="xl" mb={4}>
+              Top Headlines
+            </Heading>
+            <Box bg="gray.100" p={4} borderRadius="md">
+              <Heading as="h3" size="lg">
+                Placeholder Headline 1
+              </Heading>
+              <Text mt={2}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+              </Text>
+            </Box>
+          </Box>
+
+          {/* Articles Section */}
+          <Box>
+            <Heading as="h2" size="xl" mb={4}>
+              Latest Articles
+            </Heading>
+            <VStack spacing={4}>
+              <Box bg="gray.100" p={4} borderRadius="md" w="100%">
+                <Heading as="h3" size="lg">
+                  Placeholder Article 1
+                </Heading>
+                <Text mt={2}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                </Text>
+              </Box>
+              <Box bg="gray.100" p={4} borderRadius="md" w="100%">
+                <Heading as="h3" size="lg">
+                  Placeholder Article 2
+                </Heading>
+                <Text mt={2}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                </Text>
+              </Box>
+            </VStack>
+          </Box>
+
+          {/* Images Section */}
+          <Box>
+            <Heading as="h2" size="xl" mb={4}>
+              Featured Images
+            </Heading>
+            <HStack spacing={4}>
+              <Image
+                src="https://via.placeholder.com/300"
+                alt="Placeholder Image 1"
+                borderRadius="md"
+                boxSize="300px"
+                objectFit="cover"
+              />
+              <Image
+                src="https://via.placeholder.com/300"
+                alt="Placeholder Image 2"
+                borderRadius="md"
+                boxSize="300px"
+                objectFit="cover"
+              />
+            </HStack>
+          </Box>
+        </VStack>
+      </Box>
     </Container>
   );
 };
